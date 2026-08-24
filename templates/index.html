@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="FoodWise AI - Your intelligent food and nutrition companion"
+    >
+
+    <title>FoodWise AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🥗
+            </div>
+
+            <div>
+                <h1>FoodWise</h1>
+                <span>AI Nutrition Assistant</span>
+            </div>
+
+        </div>
+
+
+        <button
+            class="new-chat-btn"
+            id="newChatBtn"
+        >
+            <span>＋</span>
+            New Chat
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <p class="section-title">
+                Explore
+            </p>
+
+            <button
+                class="quick-sidebar-btn"
+                data-prompt="Explain the main nutrients our body needs."
+            >
+                🧬 Nutrition Basics
+            </button>
+
+            <button
+                class="quick-sidebar-btn"
+                data-prompt="Suggest a balanced Indian meal."
+            >
+                🍛 Indian Meals
+            </button>
+
+            <button
+                class="quick-sidebar-btn"
+                data-prompt="Tell me about the benefits of eating fruits and vegetables."
+            >
+                🍎 Fruits & Vegetables
+            </button>
+
+            <button
+                class="quick-sidebar-btn"
+                data-prompt="Explain protein, carbohydrates and healthy fats in simple words."
+            >
+                💡 Learn Nutrition
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-footer">
+
+            <div class="status-dot"></div>
+
+            <span>FoodWise AI Online</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+            <div class="mobile-brand">
+                🥗 FoodWise AI
+            </div>
+
+            <button
+                class="theme-btn"
+                id="themeBtn"
+                aria-label="Toggle theme"
+            >
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- CHAT AREA -->
+
+        <section
+            class="chat-area"
+            id="chatArea"
+        >
+
+            <!-- WELCOME -->
+
+            <div
+                class="welcome"
+                id="welcome"
+            >
+
+                <div class="welcome-icon">
+                    🥗
+                </div>
+
+                <h2>
+                    Welcome to FoodWise AI
+                </h2>
+
+                <p>
+                    Your friendly AI companion for learning
+                    about food, nutrition and healthy eating.
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button
+                        class="suggestion"
+                        data-prompt="What nutrients are found in vegetables?"
+                    >
+                        <span>🥦</span>
+                        <div>
+                            <strong>Food Knowledge</strong>
+                            <small>Learn about nutrients</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-prompt="Suggest a simple balanced Indian meal."
+                    >
+                        <span>🍛</span>
+                        <div>
+                            <strong>Meal Ideas</strong>
+                            <small>Explore balanced meals</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-prompt="Explain protein in simple words."
+                    >
+                        <span>💪</span>
+                        <div>
+                            <strong>Nutrition Basics</strong>
+                            <small>Understand nutrients</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-prompt="Tell me about the benefits of eating fruits."
+                    >
+                        <span>🍎</span>
+                        <div>
+                            <strong>Healthy Choices</strong>
+                            <small>Discover food options</small>
+                        </div>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div
+                class="messages"
+                id="messages"
+            ></div>
+
+
+            <!-- TYPING -->
+
+            <div
+                class="typing"
+                id="typing"
+            >
+
+                <div class="avatar">
+                    🥗
+                </div>
+
+                <div class="typing-bubble">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+
+        <footer class="input-area">
+
+            <div class="input-container">
+
+                <textarea
+                    id="messageInput"
+                    rows="1"
+                    placeholder="Ask FoodWise anything about food or nutrition..."
+                    maxlength="4000"
+                ></textarea>
+
+                <button
+                    id="sendBtn"
+                    class="send-btn"
+                    aria-label="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                FoodWise AI provides general food and nutrition
+                education, not medical advice.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>
